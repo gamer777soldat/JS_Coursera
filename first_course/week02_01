@@ -1,0 +1,20 @@
+module.exports = function (tweet) {
+    function ifWordIsHashtag(word){
+
+        if (word[0] == "#"){
+            return true;
+        }
+    }
+
+    function withoutHashtags(acc, item) {
+        acc.push(item.slice(1));
+        return acc;
+    }
+    tweets = tweet.split(" ");
+
+    result = tweets.filter(ifWordIsHashtag);
+    result = result.reduce(withoutHashtags, []);
+    result = tweets.filter(ifWordIsHashtag);
+
+    return result;
+};
