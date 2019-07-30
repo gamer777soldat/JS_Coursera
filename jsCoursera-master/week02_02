@@ -1,0 +1,24 @@
+/**
+ * @param {String[]} hashtags
+ * @returns {String}
+ */
+module.exports = function (hashtags) {
+    function withoutDouble(acc, item) {
+        if (acc.indexOf(item) >= 0) {
+            return acc;
+        } else if (acc.indexOf(item) < 0) {
+            acc.push(item);
+            return acc;
+        }
+    }
+
+    function withoutUpperCase(acc, item) {
+        acc.push(item.toLowerCase());
+        return acc;
+    }
+
+    result = hashtags.reduce(withoutUpperCase, []);
+    result = result.reduce(withoutDouble, []);
+
+    return result.join(", ");
+};

@@ -1,0 +1,65 @@
+
+var phoneBook = {};
+
+function addN(name, phones) {
+    if (!phoneBook.hasOwnProperty(name)) {
+        phoneBook[name] = [];
+    }
+
+    phoneBook[name] = phoneBook[name].concat(phones);
+}
+
+function removeContact(name, index) {
+    phoneBook[name].splice(index, 1);
+
+    if (phoneBook[name].length === 0) {
+        delete phoneBook[name];
+    }
+}
+
+function removeNum(phone) {
+    var names = Object.keys(phoneBook);
+
+    for (var i = 0; i < names.length; i++) {
+        var name = names[i];
+
+        var phoneIndex = phoneBook[name].indexOf(phone);
+
+        if (phoneIndex !== -1) {
+            removeContact(name, phoneIndex);
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function showBook() {
+
+    var names = Object.keys(phoneBook);
+    names.sort();
+
+    return names.map(function(name) {
+
+        var phones = phoneBook[name];
+
+
+        return name + ": " + phones.join(", ");
+    });
+}
+module.exports = function(command) {
+    var parts = command.split(" ");
+    if (parts[0] === "ADD") {
+        var phones = parts[2].split(",");
+
+        // Добавляем контакт и выходим из функции
+        return addN(parts[1], phones);
+    }
+    if (parts[0] === "REMOVE_PHONE") {
+        return removeNum(parts[1]);
+    }
+    if (parts[0] === "SHOW") {
+        return showBook();
+    }
+};
