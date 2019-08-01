@@ -3,51 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
+    <style>
+        table{
+            border: 1px;
+        }
+        a:link {
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+
+        a:hover {
+
+            font-size: 1.2em;
+
+        }
+
+        code {
+            color: blue;
+            font-size: 15px;
+        }
+
+        article {
+            margin: 10px;
+        }
+
+        .yan {
+            color: #ff0000;
+        }
+
+        #conv {
+            color: rebeccapurple;
+            font-size: 15px;
+            width: 40%;
+        }
+
+        #f {
+            font-style: italic;
+        }
+
+        #formul {
+            background-color: bisque;
+            padding: 10px;
+            margin: 0 70% 0 0;
+        }
+    </style>
     <title>Document</title>
 </head>
 
 <body>
-<style>
-    a:link {
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
 
-    a:hover {
-
-        font-size: 1.2em;
-
-    }
-
-    code {
-        color: blue;
-        font-size: 15px;
-    }
-
-    article {
-        margin: 10px;
-    }
-
-    .yan {
-        color: #ff0000;
-    }
-
-    #conv {
-        color: rebeccapurple;
-        font-size: 15px;
-        width: 40%;
-    }
-
-    #f {
-        font-style: italic;
-    }
-
-    #formul {
-        background-color: bisque;
-        padding: 10px;
-        margin: 0 70% 0 0;
-    }
-</style>
 <header>
 
     <h1 align="center">Блог компании <span class="yan">Яндекс.</span></h1>
@@ -67,7 +71,7 @@
 
         <ul>
             <li> подготовка
-            <li>загрузка статики (<abbr translate="no" translate="no">HTTP</abbr>-запрос и парсинг)
+            <li>загрузка статики (<abbr translate="no">HTTP</abbr>-запрос и парсинг)
             <li>исполнение модулей
             <li>инициализация базовых объектов
             <li>отрисовка
@@ -78,7 +82,7 @@
             <li>подготовка к запросу на сервер
             <li>запрос данных с сервера
             <li>шаблонизация
-            <li>обновление <abbr translate="no" translate="no">DOM</abbr>
+            <li>обновление <abbr translate="no">DOM</abbr>
         </ul>
     </article>
     <div id="conv">
@@ -125,7 +129,7 @@
         </p>
         Получается значение от нуля до единицы, которое, видимо, лучше всего показывает,
         хорошо или плохо работает почта.<br>
-        </p>
+
 
     </article>
     <article>
@@ -133,7 +137,7 @@
 
         Сейчас модуль обновления сам логирует все свои стадии, и можно легко понять
         причину замедления: медленнее стал отвечать сервер либо слишком долго
-        выполняется <abbr translate="no" translate="no">JavaScript</abbr>. Выглядит это примерно так:
+        выполняется <abbr translate="no">JavaScript</abbr>. Выглядит это примерно так:
         <pre>
             <b>
     <code>
@@ -161,11 +165,10 @@
         <h4>Как мы ускоряем</h4>
         <h5>Чтобы снизить время загрузки почты при выходе новых версий,
             мы уже делаем следующее:</h5>
-        </hgroup>
         <ul>
-            <li>включаем <abbr translate="no" translate="no">gzip</abbr>
+            <li>включаем <abbr translate="no">gzip</abbr>
             <li>выставляем заголовки кэширования
-            <li>фризим <abbr ranslate="no" title="Cascade Style Sheets">CSS</abbr>, <abbr title="JavaScript">JS</abbr>,
+            <li>фризим <abbr translate="no" title="Cascade Style Sheets">CSS</abbr>, <abbr title="JavaScript">JS</abbr>,
                 шаблоны и картинк
             <li>используем <abbr title="Content Delivery Network" translate="no">CDN;</abbr>
         </ul>
@@ -201,7 +204,7 @@
     <h4>
         Для окончательного выбора библиотеки нам нужно сравнить:
     </h4>
-    <table border="1px">
+    <table>
         <thead>
         <th>Библиотека</th>
         <th><abbr translate="no">IE 9</abbr></th>
@@ -258,7 +261,7 @@
             наложения патча на клиенте.
         </dd>
     </dl>
-    Чексумма вычисляется по алгоритму Флетчера.</p>
+    Чексумма вычисляется по алгоритму Флетчера.
 
     <article>
         <h4>Формула флетчера:</h4>
@@ -277,20 +280,19 @@
             <var>k = k+1</var><br>
             <b>end</b>
         </div>
-    </article>
     <hgroup>
         <dl>
-            <h4>
-                <dt>Алгоритм Бройдена — Флетчера — Гольдфарба — Шанно <abbr translate="no">(BFGS)</abbr>
-                </dt>
-            </h4>
-            <h5>
-                <dd>
-                    — итерационный метод численной оптимизации, предназначенный для
-                    нахождения локального максимума/минимума нелинейного функционала
-                    без ограничений.
-                </dd>
-            </h5>
+
+            <dt>Алгоритм Бройдена — Флетчера — Гольдфарба — Шанно <abbr translate="no">(BFGS)</abbr>
+            </dt>
+
+
+            <dd>
+                — итерационный метод численной оптимизации, предназначенный для
+                нахождения локального максимума/минимума нелинейного функционала
+                без ограничений.
+            </dd>
+
         </dl>
     </hgroup>
     <h4>Почему именно алгоритм Флетчера, а не другие популярные алгоритмы вроде:</h4>
@@ -309,13 +311,13 @@
     </dl>
     Потому что он быстрый, компактный и легок в реализации.
     </article>
-    <hgroup>
+
         <h4>
             Итог
         </h4>
         Фактически мы экономим <b>80-90%</b> трафика. Размер загружаемой статитки в байтах:
-    </hgroup>
-    <table border="1px">
+
+    <table>
         <thead>
         <th>Релиз</th>
         <th>С патчем</th>
@@ -342,14 +344,14 @@
     </table>
 </section>
 <footer>
-<pre>
+
    <address>
-    Автор: @doochik
-    С++ разработик
-    Электронная почта: (doochik@yandex-team.ru)
-    Компания: Яндекc
+    Автор: @doochik<br>
+    С++ разработик<br>
+    Электронная почта: (doochik@yandex-team.ru)<br>
+    Компания: Яндекc<br>
     </address>
-</pre>
+
     <section>
         <h3> Комментарии (3):</h3>
 
