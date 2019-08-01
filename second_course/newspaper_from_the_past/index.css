@@ -1,4 +1,18 @@
 /*Ссылка на шрифты кроме основного 'https://fonts.googleapis.com/css?family=Farsan|Hind+Siliguri|Racing+Sans+One|Six+Caps|Space+Mono:700'*/
+@import url('https://fonts.googleapis.com/css?family=Contrail+One&display=swap');
+@font-face {
+    font-family:'Cantata One';
+
+src: url(https://fonts.google.com/download?family=Contrail%20One) format('woff2'), local(sans-serif);
+}
+@font-face {
+    font-family: 'Six Caps';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Six Caps'), local('SixCaps'), url(https://fonts.gstatic.com/s/sixcaps/v10/6ae_4KGrU7VR7bNmaYcV_3Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body
 {
     width: 1200px;
@@ -9,7 +23,6 @@ body
 {
     display: block;
     clear: both;
-
     content: '';
 }
 
@@ -22,7 +35,7 @@ body
 .header__info
 {
     float: left;
-
+    text-align: center;
     box-sizing: border-box;
     width: 200px;
     padding: 25px 10px;
@@ -33,25 +46,32 @@ body
 .header__weather
 {
     float: right;
-
-    width: 200px;
+    border: 1px solid;
+    width: 220px;
 }
 
 .header__weather-title
 {
+    text-align: center;
+    font: bold 117% SpaceMono, monospace;
     margin: 0;
 }
 
 .header__weather-text
 {
+    text-align: justify;
+    font-size: 80%;
+    line-height:110%;
     margin: 0;
 }
 
 .header__title
 {
-    overflow: visible;
+    text-align: center;
+    white-space: nowrap;
+    font:65px "Cantata One";
 
-    margin: 0;
+    margin: 0 auto;
 }
 
 
@@ -67,7 +87,7 @@ body
 .sub-header__copyright
 {
     display: inline-block;
-
+    font-size: 60%;
     margin: 0 30px;
 }
 
@@ -86,6 +106,7 @@ body
 /*––––––––––––––––––Блок статьи–––––––––––––––––––––*/
 .article__title
 {
+    font: bold 320% Six Caps ;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -130,6 +151,8 @@ body
 
 .article__subtitle
 {
+    font: bold 117% TimesNewRoman;
+    text-align: center;
     margin: 10px 0;
 }
 
