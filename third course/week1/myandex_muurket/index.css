@@ -1,0 +1,294 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.cat {
+    overflow: hidden;
+    margin: 20px;
+    width: 33%;
+    font-size: inherit;
+    max-width: 300px;
+    min-width: 300px;
+    display: inline-block;
+    height: 40em;
+}
+
+/*IMG*/
+
+.imgForProduct {
+    display: table-cell;
+    width: 400px;
+    height: 350px;
+    vertical-align: bottom;
+}
+
+.imgForProduct img {
+    max-width: 100%;
+    max-height: 350px;
+}
+
+.imgForProduct:hover {
+    opacity: 0.7;
+}
+
+/*FINISH OF IMG*/
+
+/*NAME*/
+.name {
+    overflow: hidden;
+    font-size: 100%;
+    text-overflow: ellipsis;
+
+}
+
+.name:hover, .name a:hover {
+    overflow: visible;
+    color: red;
+    text-decoration: none;
+}
+
+/*FINISH OF NAME*/
+/*CATEGORY*/
+.category {
+    font-size: 70%;
+}
+
+/*FINISH OF CATEGORY*/
+/*COST*/
+.cost {
+    font-size: 100%;
+    color: red;
+    font-weight: 900;
+}
+
+.lastCost {
+    text-decoration: line-through;
+    font-size: 70%;
+    color: black;
+    font-weight: 300;
+}
+
+/*FINISH OF COST*/
+/*DESCRIPTION*/
+.Descripions {
+    margin: -7px 1px;
+}
+
+.Descripions p {
+    font-size: 70%;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+}
+
+.Descripions_text {
+    font-weight: 600;
+    font-size: 80%;
+}
+
+/*FINISH OF DESCRIPTION*/
+
+
+/*BUTTON for change view*/
+.option {
+    display: block;
+    margin-bottom: 0.25em;
+
+}
+
+.button {
+    padding: 0 0 0 1.2em;
+
+}
+
+.button__input {
+    position: absolute;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.button__checkbox {
+    margin-left: -1.2em;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-image: url("images/but/off.svg");
+}
+
+/*CHECKED*/
+.button__input:checked ~ .button .button__checkbox {
+    background-image: url("images/but/on.svg");
+}
+
+/*Focused*/
+.button__input:focus ~ .button .button__checkbox {
+    background-image: url("images/but/off_focused.svg");
+}
+
+.button__input:focus:checked ~ .button .button__checkbox {
+    background-image: url("images/but/on_focused.svg");
+}
+
+/*Disabled*/
+.button__input:disabled ~ .button .button__checkbox {
+    background-image: url("images/but/off_disable.svg");
+}
+
+.button__input:disabled:checked ~ .button .button__checkbox {
+    background-image: url("images/but/on_disable.svg");
+}
+
+/*Realese*/
+.button__input:checked ~ .cat {
+    width: 100%;
+    height: 5%;
+    display: block;
+    max-width: 1500px;
+    margin: 25px 12px;
+}
+
+.button__input:checked ~ .cat > .imgForProduct {
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+.button__input:checked ~ .cat > .imgForProduct img{
+    margin: 0 auto;
+}
+
+.button__input:checked ~ .cat > .Descripions {
+    width: 30em;
+    margin: 0;
+    float: right;
+    font-size: 1.2em;
+}
+
+.button__input:checked ~ .cat > .rating {
+
+}
+
+.button__input:checked ~ .cat > .Group {
+    float: left;
+    margin: 0 10px;
+}
+
+.button__input:checked ~ .cat > .name {
+}
+
+.button__input:checked ~ .button .tiles {
+    display: none;
+}
+
+.button__input:checked ~ .button .list {
+    display: inline;
+}
+
+.button__input:not(checked) ~ .button .tiles {
+    display: inline;
+}
+
+.button__input:not(checked) ~ .button .list {
+    display: none;
+}
+
+/*BUTTON for change view FINISH*/
+
+/*    Rating star*/
+/* Stars group */
+.rating {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.rating__group {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    background-image: url(images/off.svg);
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+}
+
+
+.rating__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 2em;
+    font-size: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+}
+
+.rating__star:focus {
+    outline: none;
+}
+
+.rating__star:checked,
+.rating__star:hover {
+    background-image: url("images/on.svg");
+}
+
+.rating__star:hover ~ .rating__star {
+    background-image: url("images/off.svg");
+}
+
+.rating__star:nth-of-type(1) {
+    width: 1em;
+    z-index: 10;
+}
+
+.rating__star:nth-of-type(2) {
+    width: 2em;
+    z-index: 9;
+}
+
+.rating__star:nth-of-type(3) {
+    width: 3em;
+    z-index: 8;
+}
+
+.rating__star:nth-of-type(4) {
+    width: 4em;
+    z-index: 7;
+}
+
+.rating__star:nth-of-type(5) {
+    width: 5em;
+    z-index: 6;
+}
+
+.rating__star:nth-of-type(6) {
+    width: 6em;
+    z-index: 5;
+}
+
+.rating__star:nth-of-type(7) {
+    width: 7em;
+    z-index: 4;
+}
+
+.rating__star:nth-of-type(8) {
+    width: 8em;
+    z-index: 3;
+}
+
+.rating__star:nth-of-type(9) {
+    width: 9em;
+    z-index: 2;
+}
+
+.rating__star:nth-of-type(10) {
+    width: 10em;
+    z-index: 1;
+}
+
+/*Rating finish*/
