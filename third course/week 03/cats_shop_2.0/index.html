@@ -26,7 +26,6 @@
         <label class="label_for_breed" for="abissinskays">
             <article class="breed_wrapper">Абиссинская</article>
         </label>
-
         <label class="label_for_breed" for="british">
             <article class="breed_wrapper">Британская</article>
         </label>
@@ -83,46 +82,44 @@
     <article class="raiting_wrapper">
         <h2>Рейтинг</h2>
 
-        <label for="input_rating_switcher" class="input_rating_label">
-            <p>по убыванию </p>
-            <input type="checkbox" class=" input_rating" id="input_rating_switcher">
-        </label>
+        <label class="input_rating_label" for="sort">по убыванию</label>
+        <input type="checkbox" id="sort" class="input_rating">
 
-        <ul class="ratinglist">
-            <li class="ratingAbis">
+        <ul class="rating_list">
+            <li class="rating_list_item abissinskay_rating">
                 <div>Абиссинская</div>
-                <div class="ratingwrap">
-                    <div class="ratingline">
+                <div class="rating_line_wrapper">
+                    <div class="rating_line">
                         <div></div>
                     </div>
-                    <div class="ratingNum"></div>
+                    <div class="rating_num">10</div>
                 </div>
             </li>
-            <li class="ratingBrit">
+            <li class="rating_list_item british_rating">
                 <div>Британская</div>
-                <div class="ratingwrap">
-                    <div class="ratingline">
+                <div class="rating_line_wrapper">
+                    <div class="rating_line">
                         <div></div>
                     </div>
-                    <div class="ratingNum"></div>
+                    <div class="rating_num">9</div>
                 </div>
             </li>
-            <li class="ratingRus">
+            <li class="rating_list_item russian_blue_rating">
                 <div>Русская голубая</div>
-                <div class="ratingwrap">
-                    <div class="ratingline">
+                <div class="rating_line_wrapper">
+                    <div class="rating_line">
                         <div></div>
                     </div>
-                    <div class="ratingNum"></div>
+                    <div class="rating_num">8</div>
                 </div>
             </li>
-            <li class="ratingSiam">
+            <li class="rating_list_item siamsky_rating">
                 <div>Сиамская</div>
-                <div class="ratingwrap">
-                    <div class="ratingline">
+                <div class="rating_line_wrapper">
+                    <div class="rating_line">
                         <div></div>
                     </div>
-                    <div class="ratingNum"></div>
+                    <div class="rating_num">4</div>
                 </div>
             </li>
         </ul>
