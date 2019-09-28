@@ -1,0 +1,203 @@
+/*HIDDEN INPUT*/
+.hide_input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    /*height: 10000px;*/
+}
+
+
+/******************Wrapper for vegetable******************/
+
+.vegetable_wrapper {
+    width: 20%;
+    min-width: 200px;
+    max-width: 460px;
+    height: 25%;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+
+}
+
+/******************Event Fot main and hovered IMG *******************/
+
+
+.main_img_wrapper:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.main_img_wrapper:hover ~ article {
+    display: block;
+    cursor: pointer;
+}
+
+.focusedImageWrapper:hover {
+    display: block;
+    cursor: pointer;
+}
+
+
+/******************Main IMG WRAPPER******************/
+
+.main_img_wrapper {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    box-shadow: 5px 5px 10px #ffd182;
+    background-color: white;
+    border-radius: 1em;
+    padding: 10px;
+    display: block;
+}
+
+.imageOfHarvest {
+    max-width: 100%;
+    max-height: 350px;
+    vertical-align: bottom;
+}
+
+/******************FocusedImageWrapper******************/
+.focusedImageWrapper {
+    width: 130%;
+    min-width: 150px;
+
+
+    background-color: white;
+
+    /*outline: 1px solid black;*/
+    box-shadow: 5px 5px 10px #ffaf64;
+    border-radius: 1em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    z-index: 1;
+}
+
+.focusedImageWrapper label img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+
+}
+
+.text_for_focus_card {
+    text-align: center;
+
+    margin: auto 0;
+    padding: 5px;
+    font-size: 0.7em;
+}
+
+/*HUGE IMG*/
+.huge_img_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69,69,69,0.37);
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    display: none;
+}
+
+
+.huge_img {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.huge_img img {
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+}
+
+.input_for_harvest_image:checked ~ .huge_img_wrapper {
+    display: block;
+}
+
+/*CLOSE BUT*/
+
+.close_but {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    z-index: 11;
+
+}
+
+.close_but_label {
+    font-size: 4.5em;
+    cursor: pointer;
+}
+
+/*HUGE IMG ACTION*/
+
+.close_but_label:hover {
+    height: .5em;
+    cursor: pointer;
+}
+
+.close_wrapper {
+    width: .8em;
+    height: .8em;
+
+    border-radius: .5em;
+}
+
+
+/*SWITCHER OF VIEWS*/
+
+.switcher_views_radio {
+    position: relative;
+    top: 0.2em;
+    left: 50%;
+
+    transform: translateX(-50%);
+    display: inline-block;
+    margin: 0 auto 0 auto;
+}
+
+.switcher_views_radio:nth-of-type(1):checked ~ .lines:nth-of-type(1) {
+    display: block;
+}
+
+.switcher_views_radio:nth-of-type(2):checked ~ .lines:nth-of-type(2) {
+    display: block;
+}
+
+.switcher_views_radio:nth-of-type(3):checked ~ .lines:nth-of-type(3) {
+    display: block;
+}
+
+.switcher_views_radio {
+
+}
+
+
+/*MAIN WRAPPER FOR EVERYCHILD DEFAULT SET UP*/
+.lines {
+    display: none;
+}
