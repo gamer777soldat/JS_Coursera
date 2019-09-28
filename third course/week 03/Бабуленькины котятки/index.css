@@ -1,0 +1,359 @@
+
+body{
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+
+
+    background-color: rgb(235, 235, 235);
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    max-width: 1800px;
+    min-width: 800px;
+}
+
+body header{
+    padding: 15px 0px;
+    text-align: center;
+}
+
+body main{
+    max-width: 100vw;
+    margin: 20px;
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+body ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*------------------------------ Фильтр пород --------------------------------*/
+
+body main .catfilter{    
+
+    background-color: rgb(209, 209, 209);
+
+
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+body input[type="radio"]{
+    display: none;
+}
+
+ul.catfilter li{
+    height: 50px;
+    border-bottom: 1px grey solid;
+}
+
+input.AbFilt:checked ~ div.pictures div:not([class*=Ab]){
+    opacity: 0.5;
+}
+
+input.BrFilt:checked ~ div.pictures div:not([class*=Br]){
+    opacity: 0.5;
+}
+
+input.RuFilt:checked ~ div.pictures div:not([class*=Ru]){
+    opacity: 0.5;
+}
+
+input.SiFilt:checked ~ div.pictures div:not([class*=Si]){
+    opacity: 0.5;
+}
+
+ul.catfilter > li > label{
+    display: flex;
+    height: 100%;
+    width: 100%; 
+    flex-direction: column;
+
+    justify-content: center;
+    margin: 0px 15px;   
+}
+
+input[id="Ab"]:checked ~ ul.catfilter > li.Ab{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+input[id="Br"]:checked ~ ul.catfilter > li.Br{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+input[id="Ru"]:checked ~ ul.catfilter > li.Ru{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+input[id="Si"]:checked ~ ul.catfilter > li.Si{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+input[id="Un"]:checked ~ ul.catfilter > li.Uncheck{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+/*------------------------------ /Фильтр пород -------------------------------*/
+
+
+/*---------------------------------- Фото ------------------------------------*/
+body main div.pictures{
+    flex-grow: 1;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr; 
+    
+    gap: 10px;
+    min-width: 450px;   
+}
+
+div.pictures  img{ 
+    width: 100%;
+    height: 100%;
+}
+
+div.pictures div:nth-child(8n+2){
+    grid-column: auto / span 2;
+}
+
+div.pictures div:nth-child(8n+6){
+    grid-column: auto / span 2;
+}
+
+div.pictures div:nth-child(8n+8){
+    grid-column: auto / span 3;
+}
+
+div.picWr{
+    position: relative;
+}
+
+div.picWr:after{       
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
+    visibility: hidden;
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 80%;
+}
+
+div.picWr:hover:after{
+    visibility: visible;   
+}
+
+
+div[class*=Ab1]:after{
+    content: "Кактус, 4 года";
+}     
+
+div[class*=Ab2]:after{
+    content: "Чендлер, 8 месяцев";
+} 
+
+div[class*=Br1]:after{
+    content: "Дымок, 1 год";
+} 
+
+div[class*=Br2]:after{
+    content: "Вася, 1 год";
+} 
+
+div[class*=Ru1]:after{
+    content: "Эдуард, 3 года";
+} 
+
+div[class*=Ru2]:after{
+    content: "Кактус, 4 года";
+} 
+
+div[class*=Si1]:after{
+    content: "Вася, 3 года";
+} 
+
+div[class*=Si2]:after{
+    content: "Люся, 2 года";
+} 
+
+
+
+
+/*---------------------------------- /Фото -----------------------------------*/
+
+
+/*--------------------------------- Рейтинг ----------------------------------*/
+
+/*--------------- Общие ---------------*/
+body main .rating{
+    background-color: rgb(209, 209, 209);
+    align-self: flex-start;
+
+    margin-left: 10px;
+    padding: 3px 15px 15px 15px;
+
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.rating h2{
+    margin: 0px;
+    text-align: left;
+    color: rgb(179, 0, 0);
+    font-weight: normal;
+}
+
+input.sort{
+    margin: 0px;
+    align-self: flex-end;
+    position: relative;
+    top: -12px;
+}
+
+.rating label{
+    margin-top: 10px;
+    padding-right: 20px;
+    text-align: right;
+    font-size: .8em;
+}
+
+.rating ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.rating > ul > li{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+
+div.ratingwrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;     
+}
+
+div.ratingline{
+    height: 20px;    
+    flex-grow: 1;
+}
+.ratingNum{
+    width: 2ch;
+    text-align: center;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+div.ratingline div{   
+    height: 100%;
+}
+/*--------------- /Общие --------------*/
+
+/*-------- Рейтинг Абиссинская---------*/
+li.ratingAbis div.ratingline div{   
+    width: 90%;                                        /*Длина полосы рейтинга*/
+    background: linear-gradient(90deg, green, white);    
+}
+
+.ratingNum:after{    
+    content: "9";                                          /*Значение рейтинга*/
+}
+
+
+/*-------- Рейтинг Британская---------*/
+li.ratingBrit div.ratingline div{ 
+    width: 80%;                                        /*Длина полосы рейтинга*/
+    background: linear-gradient(90deg, yellow, white);    
+}
+
+li.ratingBrit .ratingNum:after{    
+    content: "8";                                          /*Значение рейтинга*/
+}
+
+
+/*--------- Рейтинг Русская ---------*/
+li.ratingRus div.ratingline div{ 
+    width: 100%;                                       /*Длина полосы рейтинга*/
+    background: linear-gradient(90deg, green, white);    
+}
+
+li.ratingRus .ratingNum:after{    
+    content: "10";                                         /*Значение рейтинга*/
+}
+
+
+/*-------- Рейтинг Сиамская---------*/
+li.ratingSiam div.ratingline div{ 
+    width: 40%;                                        /*Длина полосы рейтинга*/
+    background: linear-gradient(90deg, red, white);    
+}
+
+li.ratingSiam .ratingNum:after{    
+    content: "4";                                          /*Значение рейтинга*/
+}
+
+/*----------- Сортировка рейтинга ------------*/
+input.sort:checked ~ ul li.ratingRus{
+    order:1;
+}
+
+input.sort:checked ~ ul li.ratingAbis{
+    order:2;
+}
+
+input.sort:checked ~ ul li.ratingBrit{
+    order:3;
+}
+
+input.sort:checked ~ ul li.ratingSiam{
+    order:4;
+}
+
+/*--------------------------------/Рейтинг------------------------------------*/
+
+
+/*---------------------------------- Подвал ----------------------------------*/
+
+body footer{
+    border-top: 1px grey solid;    
+}
+
+body footer p{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 2%;
+}
+
+body footer span.address{
+    color: rgb(46, 46, 255);
+} 
+
+/*--------------------------------- /Подвал ----------------------------------*/

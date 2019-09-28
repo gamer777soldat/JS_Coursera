@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Бабуленькины котятки</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Бабуленькины котятки</h1>
+        </header>
+        <main>
+            <input type="radio" id="Ab" name="cattype" class="AbFilt">
+            <input type="radio" id="Br" name="cattype" class="BrFilt">
+            <input type="radio" id="Ru" name="cattype" class="RuFilt">
+            <input type="radio" id="Si" name="cattype" class="SiFilt">
+            <input type="radio" id="Un" name="cattype" class="Uncheck" checked>
+
+            <ul class="catfilter">            
+                <li class="Uncheck"><label for="Un">Все породы</label></li>
+                <li class="Ab"><label for="Ab">Абисcинская</label></li>
+                <li class="Br"><label for="Br">Британская</label></li>
+                <li class="Ru"><label for="Ru">Русская голубая</label></li>
+                <li class="Si"><label for="Si">Сиамская</label></li>                
+            </ul>
+            <div class="pictures">            
+                <div class="Ab1 picWr"><img src="pic/Abis1.jpg" title="Абиссинская"></div>
+                <div class="Br1 picWr"><img src="pic/Brit1.jpg" title="Британская"></div>  
+                <div class="Ab2 picWr"><img src="pic/Abis2.jpg" title="Абиссинская"></div>                                            
+                <div class="Br2 picWr"><img src="pic/Brit2.jpg" title="Британская"></div>
+                <div class="Ru1 picWr"><img src="pic/Rus2.jpg" title="Русская голубая"></div>
+                <div class="Ru2 picWr"><img src="pic/Rus1.jpg" title="Русская голубая"></div>                    
+                <div class="Si1 picWr"><img src="pic/Siam1.jpg" title="Сиамская"></div>
+                <div class="Si2 picWr"><img src="pic/Siam2.jpg" title="Сиамская"></div>   
+            </div>
+            <div class="rating">
+                <h2> РЕЙТИНГ </h2>                
+                <label for="sort">по убыванию</label>
+                <input type="checkbox" id="sort" class="sort">            
+
+                <ul class="ratinglist">
+                    <li class="ratingAbis">
+                        <div>Абиссинская</div>
+                        <div class="ratingwrap">
+                            <div class="ratingline"><div></div></div>
+                            <div class="ratingNum"></div>
+                        </div>                        
+                    </li>
+                    <li class="ratingBrit">
+                        <div>Британская</div>
+                        <div class="ratingwrap">
+                            <div class="ratingline"><div></div></div>
+                            <div class="ratingNum"></div>
+                        </div>                  
+                    </li>
+                    <li class="ratingRus">
+                        <div>Русская голубая</div>
+                        <div class="ratingwrap">
+                            <div class="ratingline"><div></div></div>
+                            <div class="ratingNum"></div>
+                        </div>                        
+                    </li>
+                    <li class="ratingSiam">
+                        <div>Сиамская</div>
+                        <div class="ratingwrap">
+                            <div class="ratingline"><div></div></div>
+                            <div class="ratingNum"></div>
+                        </div>                         
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+        <footer>
+            <p>
+                <span>&copy; <span itemprop="affilation">Бабуленькины котятки</span>, <time>2015</time></span>
+                <span class="address">Наш адрес: <span itemprop="streetAddress">улица Котовая, д.5</span>
+            </p>
+        </footer>
+    </body>
+
+</html>

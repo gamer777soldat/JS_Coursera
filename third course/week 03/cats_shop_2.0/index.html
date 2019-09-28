@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
-    
+
     <link href="main.css" rel="stylesheet" type="text/css">
     <title>Cats shop</title>
 </head>
@@ -15,32 +15,57 @@
 <header>
     Бабуленькины котятки
 </header>
-<input type="radio" class="input_hide input_for_rating" name="rating" id="sort_for_rating">
 
-<input type="radio" class="input_hide input_for_breed" name="breeds" id="abissinskay">
+<input type="radio" class="input_hide input_for_breed" name="breeds" id="abissinskays">
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="british">
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="russian_blue">
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="siamsky">
 <main class="main_wrapper">
-    <aside class="breed">
-        <article class="label_breed_wrapper"><label class="label_for_breed" for="abissinskay">Абиссинская </label></article>
-        <article class="label_breed_wrapper"><label class="label_for_breed" for="british">Британская </label></article>
-        <article class="label_breed_wrapper"><label class="label_for_breed" for="russian_blue"> Русская голубая </label></article>
-        <article class="label_breed_wrapper"><label class="label_for_breed" for="siamsky">Сиамская </label></article>
-    </aside>
+    <nav class="breed">
+        <label class="label_for_breed" for="abissinskays"><article class="breed_wrapper">Абиссинская </article> </label>
+
+        <label class="label_for_breed" for="british"><article class="breed_wrapper">Британская </article></label>
+        <label class="label_for_breed" for="russian_blue"> <article class="breed_wrapper">Русская голубая
+        </article></label>
+        <label class="label_for_breed" for="siamsky"><article class="breed_wrapper">Сиамская</article> </label>
+    </nav>
 
     <section class="images_wrapper">
-        <img src="images/1.jpg" class="img_item abissinskay" alt="Nice cat">
-        <img src="images/2.jpg" class="img_item british" alt="Nice cat">
-        <img src="images/3.jpeg" class="img_item siamsky" alt="Nice cat">
-        <img src="images/4.jpg" class="img_item russian_blue" alt="Nice cat">
-        <img src="images/5.jpg" class="img_item abissinskay" alt="Nice cat">
-        <img src="images/6.jpg" class="img_item siamsky" alt="Nice cat">
-        <img src="images/7.jpg" class="img_item siamsky" alt="Nice cat">
-        <img src="images/8.jpg" class="img_item abissinskay"  alt="Nice cat">
-        <img src="images/9.jpg" class="img_item russian_blue" alt="Nice cat">
-        <img src="images/10.jpg" class="img_item british" alt="Nice cat">
-        <img src="images/11.jpg" class="img_item russian_blue" alt="Nice cat">
+        <div class="img_item_wrapper"><img src="images/1.jpg" class="img_item abissinskay" alt="Nice cat">
+            <aside>Вася, 2 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/2.jpg" class="img_item british" alt="Nice cat">
+            <aside>Гоша, 4 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/3.jpeg" class="img_item siamsky" alt="Nice cat">
+            <aside>Пикклз, 9 лет</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/4.jpg" class="img_item russian_blue" alt="Nice cat">
+            <aside>Пушок, 4 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/5.jpg" class="img_item abissinskay" alt="Nice cat">
+            <aside>Клубок, 7 лет</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/6.jpg" class="img_item siamsky" alt="Nice cat">
+            <aside>Паркет, 3 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/7.jpg" class="img_item siamsky" alt="Nice cat">
+            <aside>Найс, 5 лет</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/8.jpg" class="img_item abissinskay" alt="Nice cat">
+            <aside>
+                <div>Зевака, 1 год</div>
+            </aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/9.jpg" class="img_item russian_blue" alt="Nice cat">
+            <aside>Джим, 4 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/10.jpg" class="img_item british" alt="Nice cat">
+            <aside>Усатый, 2 года</aside>
+        </div>
+        <div class="img_item_wrapper"><img src="images/11.jpg" class="img_item russian_blue" alt="Nice cat">
+            <aside>Серый, 2 года</aside>
+        </div>
     </section>
 
     <aside class="raiting_wrapper">

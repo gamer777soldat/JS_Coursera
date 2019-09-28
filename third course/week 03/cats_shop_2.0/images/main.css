@@ -35,6 +35,21 @@ header {
     margin: 0 10px;
 }
 
+/*Three columns*/
+/*BREED*/
+
+.breed {
+    flex: 20%;
+    justify-self: left;
+
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    background-color: #adadad;
+}
 
 /*INPUTS FOR BREED*/
 .img_item {
@@ -77,42 +92,25 @@ header {
     opacity: 0.5;
 }
 
-/*Three columns*/
-/*BREED*/
 
-.breed {
-    flex: 20%;
-    justify-self: left;
+.label_breed_wrapper {
+    width: 95%;
 
-    border-radius: 2px;
-
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
-    background-color: #adadad;
-}
-
-
-.label_for_breed{
-    /*outline: 1px black solid;*/
-    border-top: 1px solid rgba(0, 0, 0, 0.75);
-}
-.breed_wrapper {
     margin: 10px 0 0 0;
-    padding: 10px 0 10px 4%;
+    padding: 10px 0 0 4%;
 
     text-align: left;
-    font-size: 1.4em;
+    font-size: 1em;
     /*outline: 1px black solid;*/
 }
 
 /*Border for breeds texts*/
-.breed_wrapper:nth-of-type(1) {
+.label_breed_wrapper:nth-child(1) {
     margin: 5px 0 0 0;
 }
-.label_for_breed:nth-of-type(1){
-    border-top:none;
+
+.label_breed_wrapper:nth-of-type(1n+2) {
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 /*Switch the breeds*/
@@ -133,68 +131,29 @@ header {
     justify-self: center;
 }
 
-.img_item_wrapper {
+.img_item {
     opacity: 1;
     /*outline: 1px solid black;*/
     border-radius: 2px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     background-color: #999999;
 
 }
-.img_item{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-/*DETAILS*/
-.img_item_wrapper aside {
-    font-size: 2em;
-    background-color: rgba(148, 148, 148, 0.55);
-    border-radius: 0 10px 10px 0;
-    display: inline-block;
-
-    font-weight: lighter;
-    opacity: 0;
-
-    -webkit-transition: opacity .5s ease, font-weight 2s linear;
-    -moz-transition: opacity .5s ease, font-weight 2s linear;
-    -o-transition: opacity .5s ease, font-weight 2s linear;
-    transition: opacity .5s ease, font-weight 2s linear;
-
-    padding-right: 10px;
-    /*max-width: 350px;*/
-    position: relative;
-    top: -40%;
-}
-
-
-/*HOVERING IMAGE ITEMS*/
-.img_item_wrapper:hover {
-    cursor: pointer;
-}
-
-.img_item_wrapper:hover aside {
-    cursor: pointer;
-
-    font-weight: normal;
-    opacity: 1;
-
-}
-
 
 /*even second*/
-.img_item_wrapper:nth-child(8n + 2) {
+.img_item:nth-child(8n + 2) {
     grid-column: auto /span 2;
 }
 
 /*even sixth*/
-.img_item_wrapper:nth-child(8n + 6) {
+.img_item:nth-child(8n + 6) {
     grid-column: auto /span 2;
 }
 
 /*even eighth elem*/
-.img_item_wrapper:nth-child(8n + 8) {
+.img_item:nth-child(8n + 8) {
     grid-column: auto /span 3;
 }
 
