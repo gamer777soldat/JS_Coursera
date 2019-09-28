@@ -20,14 +20,26 @@
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="british">
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="russian_blue">
 <input type="radio" class="input_hide input_for_breed" name="breeds" id="siamsky">
+<input type="radio" id="Un" class="input_hide Uncheck input_for_breed" name="breeds" checked>
 <main class="main_wrapper">
     <nav class="breed">
-        <label class="label_for_breed" for="abissinskays"><article class="breed_wrapper">Абиссинская </article> </label>
+        <label class="label_for_breed" for="abissinskays">
+            <article class="breed_wrapper">Абиссинская</article>
+        </label>
 
-        <label class="label_for_breed" for="british"><article class="breed_wrapper">Британская </article></label>
-        <label class="label_for_breed" for="russian_blue"> <article class="breed_wrapper">Русская голубая
-        </article></label>
-        <label class="label_for_breed" for="siamsky"><article class="breed_wrapper">Сиамская</article> </label>
+        <label class="label_for_breed" for="british">
+            <article class="breed_wrapper">Британская</article>
+        </label>
+        <label class="label_for_breed" for="russian_blue">
+            <article class="breed_wrapper">Русская голубая
+            </article>
+        </label>
+        <label class="label_for_breed" for="siamsky">
+            <article class="breed_wrapper">Сиамская</article>
+        </label>
+        <label class="label_for_breed" for="Un">
+            <article class="breed_wrapper">Все породы</article>
+        </label>
     </nav>
 
     <section class="images_wrapper">
@@ -68,9 +80,54 @@
         </div>
     </section>
 
-    <aside class="raiting_wrapper">
-        ryrtyrtyffefddpeddrt----------
-    </aside>
+    <article class="raiting_wrapper">
+        <h2>Рейтинг</h2>
+
+        <label for="input_rating_switcher" class="input_rating_label">
+            <p>по убыванию </p>
+            <input type="checkbox" class=" input_rating" id="input_rating_switcher">
+        </label>
+
+        <ul class="ratinglist">
+            <li class="ratingAbis">
+                <div>Абиссинская</div>
+                <div class="ratingwrap">
+                    <div class="ratingline">
+                        <div></div>
+                    </div>
+                    <div class="ratingNum"></div>
+                </div>
+            </li>
+            <li class="ratingBrit">
+                <div>Британская</div>
+                <div class="ratingwrap">
+                    <div class="ratingline">
+                        <div></div>
+                    </div>
+                    <div class="ratingNum"></div>
+                </div>
+            </li>
+            <li class="ratingRus">
+                <div>Русская голубая</div>
+                <div class="ratingwrap">
+                    <div class="ratingline">
+                        <div></div>
+                    </div>
+                    <div class="ratingNum"></div>
+                </div>
+            </li>
+            <li class="ratingSiam">
+                <div>Сиамская</div>
+                <div class="ratingwrap">
+                    <div class="ratingline">
+                        <div></div>
+                    </div>
+                    <div class="ratingNum"></div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </article>
 
 </main>
 <footer>
