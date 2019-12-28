@@ -10,11 +10,6 @@ body {
     margin: 8px;
     /*background-color: #f6674c;*/
 }
-@media (max-width: 984px) {
-    .body {
-        margin: 0 18px 0 18px;
-    }
-}
 
 /*HEADER-LOGO*/
 header {
@@ -58,6 +53,7 @@ header {
 }
 
 .cars_images_wrapper {
+    outline: 1px solid black;
     margin: 0 auto;
 }
 
@@ -68,9 +64,6 @@ header {
 }
 
 /*SWITCHERS WITH YELLOW CIRCLE*/
-.quote_cars_switcher {
-
-}
 
 .yellow_circle_wrapper:hover .yellow_circle_left:before {
     color: #ffe65a;
@@ -159,15 +152,16 @@ header {
     /*background-color: #ffc94c;*/
     background-color: #f6f5f3;
     flex: 0 0 35%;
-    text-overflow:ellipsis;
+    margin: 0 0 2% 0;
+    /*outline: 1px solid black;*/
 }
 
 .benefits_header_p {
     /*outline: 1px solid black;*/
     padding: 0;
-    margin-bottom: 40px;
+    margin: 5% 0 6% 0;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     height: 60px;
     font-weight: bolder;
 
@@ -175,6 +169,7 @@ header {
 
 .wrapper_all_benefits {
     display: flex;
+    /*text-overflow:ellipsis;*/
     justify-content: space-between;
 }
 
@@ -191,29 +186,36 @@ header {
 
 .benefit_wrapper div {
     /*outline: 1px solid black;*/
+    min-width: 250px;
+    white-space: pre-line;
+    font-weight: bolder;
     text-align: center;
-    font-size: 1.5em;
+    /*overflow: hidden;*/
+    font-size: 1.8em;
 }
 
 .benefit_wrapper aside {
+    text-overflow: ellipsis;
+    overflow: hidden;
     /*outline: 1px solid black;*/
 }
 
 .benefit_wrapper aside p {
     padding: 0;
+    font-size: 1.4em;
     text-align: center;
 }
 
 /*-----------------------------------------------------------------*/
 .call {
     background-color: #f6f5f3;
-    padding: 40px 0 30px 0;
+    margin: 60px 0 30px 0;
     /*outline: 1px solid black;*/
 }
 
 .text_above_but {
     /*outline: 1px solid black;*/
-    margin-bottom: 25px ;
+    margin-bottom: 25px;
     text-align: center;
     font-size: 2em;
     font-weight: bolder;
@@ -226,16 +228,16 @@ header {
 
 .button_try {
     text-align: center;
-    width: 12%;
+    width: 20%;
     max-width: 200px;
-    min-width: 150px;
+    min-width: 200px;
     height: 60px;
 
     margin: 0 auto;
 
     border-radius: 6px 6px 6px 6px;
-    background:linear-gradient(to top ,#ffdb01, #ffe364);
-    box-shadow: 2px 2px 5px#fcbe48;
+    background: linear-gradient(to top, #ffdb01, #ffe364);
+    box-shadow: 2px 2px 5px #fcbe48;
 
     display: flex;
     /*outline: 1px solid black;*/
@@ -267,3 +269,66 @@ header {
 }
 
 /*------------------------------------*/
+
+@media (max-width: 984px) {
+    .body {
+        margin: 0 18px 0 18px;
+    }
+
+    .benefits {
+        margin: 20px 0 70px 0;
+    }
+
+    .benefit_wrapper div {
+        font-size: 1.5em;
+        min-width: 100px;
+    }
+
+    .benefit_wrapper aside {
+        font-size: 0.8em;
+    }
+
+    .benefit_wrapper {
+        min-width: 150px;
+        max-width: 550px;
+    }
+
+    .img_benefit_wrapper {
+        /*max-width: 100px;*/
+    }
+
+    .img_benefit_wrapper img {
+        max-width: 150px;
+    }
+
+    .wrapper_all_benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quote_cars_switcher {
+        font-size: 1.3em;
+        max-width: 840px;
+    }
+
+    .video_preview_img_wrapper {
+        min-width: 350px;
+        width: 60%;
+    }
+
+    .quote_cars_switcher {
+        width:50%;
+        max-width: 840px;
+    }
+
+    .benefits {
+        margin-top: 40px;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .benefits_header_p {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+}
