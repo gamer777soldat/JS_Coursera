@@ -7,8 +7,13 @@ body {
 
 .body {
     background-color: #f6f5f3;
-    margin: 18px;
+    margin: 8px;
     /*background-color: #f6674c;*/
+}
+@media (max-width: 984px) {
+    .body {
+        margin: 0 18px 0 18px;
+    }
 }
 
 /*HEADER-LOGO*/
@@ -143,8 +148,8 @@ header {
 }
 
 .hover_circle_video_switcher:hover .yellow_circle_switcher_img_wrapper:before {
-    color: rgb(255, 230, 90);
-    opacity: 0.7;
+    /*color: rgb(255, 230, 90);*/
+    opacity: 0.8;
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -154,7 +159,7 @@ header {
     /*background-color: #ffc94c;*/
     background-color: #f6f5f3;
     flex: 0 0 35%;
-
+    text-overflow:ellipsis;
 }
 
 .benefits_header_p {
@@ -164,7 +169,7 @@ header {
     text-align: center;
     font-size: 3em;
     height: 60px;
-    font-weight: lighter;
+    font-weight: bolder;
 
 }
 
@@ -229,7 +234,7 @@ header {
     margin: 0 auto;
 
     border-radius: 6px 6px 6px 6px;
-    background-color: #ffe235;
+    background:linear-gradient(to top ,#ffdb01, #ffe364);
     box-shadow: 2px 2px 5px#fcbe48;
 
     display: flex;
