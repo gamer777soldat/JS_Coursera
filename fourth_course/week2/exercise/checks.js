@@ -1,7 +1,7 @@
 var assert = require('assert');
-
 var Collection = require('./index');
-
+arr = [1, 2, 2]
+console.log(arr[4])
 // Создаем коллекцию чисел
 var numbers = new Collection();
 numbers.append(10);
